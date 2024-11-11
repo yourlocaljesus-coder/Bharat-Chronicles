@@ -42,8 +42,8 @@
         }
 
         @keyframes typing {
-            0% { width: 0; }
-            100% { width: 100%; }
+            0% { width: -20; }
+            100% { width: 93%; }
         }
 
         @keyframes blink {
@@ -57,8 +57,8 @@
             overflow: hidden;
             border-right: 3px solid red;
             width: 0;
-            animation: typing 4s steps(300) 1s forwards, blink 0.7s step-end infinite;
-            padding: 30px;
+            animation: typing 4s steps(500) 1s forwards, blink 0.7s step-end infinite;
+            padding-left: 35px;
         }
 
         pre {
@@ -67,7 +67,7 @@
 
         nav {
             position: fixed;
-            top: 0;
+            top: 25px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
@@ -159,19 +159,19 @@
     </style>
 </head>
 <body>
-    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 pt-5">
+    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5  max-w-6xl">
         <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
         <ul class="flex space-x-5">
-            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in active">Home!</a></li>
-            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">History!</a></li>
-            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Languages!</a></li>
-            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">About Temples!</a></li>
-            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">The Major Parts!</a></li>
-            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Achieving Freedom!</a></li>
-            <li class="cursor-pointer"><a href="ContactUs.html" class="no-underline hover:text-red-500 underline-hover fade-in">Contact Us!</a></li>
+            <li class="cursor-pointer"><a href="index.html" class="no-underline hover:text-red-500 underline-hover fade-in active">Home</a></li>
+            <li class="cursor-pointer"><a href="history.html" class="no-underline hover:text-red-500 underline-hover fade-in">History</a></li>
+            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Languages</a></li>
+            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">About Temples</a></li>
+            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">The Major Parts</a></li>
+            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Achieving Freedom</a></li>
+            <li class="cursor-pointer"><a href="ContactUs.html" class="no-underline hover:text-red-500 underline-hover fade-in">Contact Us</a></li>
         </ul>
     </nav>
-    <div class="main bg-gradient-to-t from-blue-700 to-blue-400 min-h-screen pt-56 flex justify-center items-center">
+    <div class="main bg-gradient-to-t from-blue-700 to-blue-400 min-h-screen pt-56 flex justify-center items-left">
         <div class="flex flex-col md:flex-row items-center">
             <div class="text-left text-white md:w-100 w-full">
                 <h1 class="font-serif text-9xl">Bharat Chronicles</h1>
@@ -184,10 +184,11 @@ to review our website!
                 </pre>
             </div>
             <div class="md:w-1/2 w-full">
-                <img src="images/bharat_chronicles-removebg-preview.png" alt="Bharat Chronicles" class="max-w-full">
+                <img src="images/bharat white.png" alt="Bharat Chronicles" class="max-w-full">
             </div>
         </div>  
        </div>
+       <hr class="accent-black">
        <section class="about-us-section" id="about-us">
         <h2 class="about-us-title">About Us</h2>
         <div class="card">
@@ -197,6 +198,7 @@ to review our website!
                 <p class="card-description">Aravali International School, Sector-85, Greater-Faridabad, Haryana, India, Earth, Sun's Orbit, Milky Way Galaxy, Universe.</p>
             </div>
         </div>
+        &copy; Bharat Chronicles 2024
     </section>
 </body>
 </html>
