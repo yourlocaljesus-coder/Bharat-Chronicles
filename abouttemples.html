@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bharat Chronicles | Landing Page</title>
+    <style>
+        .underline-hover::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: Red;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .underline-hover:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .underline-hover {
+            position: relative;
+        }
+
+        .active {
+            color: red;
+        }
+
+        .active::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%) scaleX(1);
+            width: 100%;
+            height: 2px;
+            background-color: red;
+        }
+        nav {
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            padding: 20px 30px;
+            background-color: rgba(50, 50, 50, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, #4a90e2, #50a3a2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: white;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        @keyframes typing {
+            0% { width: -20; }
+            100% { width: 46.5%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { border-right-color: transparent; }
+            50%, 100% { border-right-color: red; }
+        }
+
+        h1 {
+            display: fixed;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid red;
+            width: 0;
+            animation: typing 4s steps(500) 1s forwards, blink 0.7s step-end infinite;
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, #4a90e2, #50a3a2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: white;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card .card-content {
+            padding: 30px;
+        }
+
+        .card .card-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .card .card-description {
+            font-size: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            font-size: 1.25rem;
+        }
+
+        .about-us-section {
+            padding: 80px 0;
+            background: linear-gradient(to top, #60a5fa, #1d4ed8);
+            color: white;
+            text-align: center;
+        }
+
+        .about-us-title {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+         .pop-out-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            max-width: 350px;
+            margin: 20px;
+            padding: 20px;
+        }
+        .pop-out-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .py-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+    </style>
+</head>
+<body class="main bg-gradient-to-t from-blue-700 to-blue-400">
+    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl">
+        <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
+        <ul class="flex space-x-5">
+            <li class="cursor-pointer"><a href="index.html" class="no-underline hover:text-red-500 underline-hover fade-in">Home</a></li>
+            <li class="cursor-pointer"><a href="history.html" class="no-underline hover:text-red-500 underline-hover fade-in">Brief History</a></li>
+            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Languages</a></li>
+            <li class="cursor-pointer"><a href="abouttemples.html" class="no-underline hover:text-red-500 underline-hover fade-in active">About Temples</a></li>
+            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">The Major Parts</a></li>
+            <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Achieving Freedom</a></li>
+            <li class="cursor-pointer"><a href="ContactUs.html" class="no-underline hover:text-red-500 underline-hover fade-in">Contact Us</a></li>
+        </ul>
+    </nav>
+    <body class="main bg-gradient-to-t from-blue-700 to-blue-400">
+        <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl">
+            <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
+            <ul class="flex space-x-5">
+                <li class="cursor-pointer"><a href="index.html" class="no-underline hover:text-red-500 underline-hover fade-in">Home</a></li>
+                <li class="cursor-pointer"><a href="history.html" class="no-underline hover:text-red-500 underline-hover fade-in">Brief History</a></li>
+                <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Languages</a></li>
+                <li class="cursor-pointer"><a href="abouttemples.html" class="no-underline hover:text-red-500 underline-hover fade-in active">About Temples</a></li>
+                <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">The Major Parts</a></li>
+                <li class="cursor-pointer"><a href="#" class="no-underline hover:text-red-500 underline-hover fade-in">Achieving Freedom</a></li>
+                <li class="cursor-pointer"><a href="ContactUs.html" class="no-underline hover:text-red-500 underline-hover fade-in">Contact Us</a></li>
+            </ul>
+        </nav>
+    
+        <div class="flex flex-col items-center justify-start pt-40 text-white">
+            <h1 class="font-serif text-9xl mb-11 justify-center text-white">About Temples</h1>
+            <div class="main bg-transparentcontainer mx-auto p-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="pop-out-card bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Card Title 1</h3>
+                            <p class="text-sm text-gray-600">This is a description for card 1.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Card Title 2</h3>
+                            <p class="text-sm text-gray-600">This is a description for card 2.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Card Title 3</h3>
+                            <p class="text-sm text-gray-600">This is a description for card 3.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Card Title 4</h3>
+                            <p class="text-sm text-gray-600">This is a description for card 4.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Card Title 5</h3>
+                            <p class="text-sm text-gray-600">This is a description for card 5.</p>
+                        </div>
+                    </div>
+                    <div class="pop-out-card bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/150" alt="Card Image" class="w-full h-40 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold mb-2 text-black">Card Title 6</h3>
+                            <p class="text-sm text-gray-600">This is a description for card 6.</p>
+                        </div>
+                </div>
+            </div>
+        </div>         
+      <hr>
+      <section class="about-us-section" id="about-us">
+          <h2 class="about-us-title">About Us</h2>
+          <div class="card">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.6567905860034!2d77.35540691174769!3d28.39943239452555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdcddb26bdc75%3A0xb50944a190a0da51!2sAravali%20International%20School%20Sec-85!5e0!3m2!1sen!2sin!4v1731078474856!5m2!1sen!2sin" 
+                  width="1800" 
+                  height="500" 
+                  style="border:0;" 
+                  allowfullscreen 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <div class="card-content">
+                  <h3 class="card-title">Aravali International School, Sector-85</h3>
+                  <p class="card-description">Aravali International School, Sector-85, Greater-Faridabad, Haryana, India</p>
+                  <p>&copy; BHARAT CHRONICLES | WHERE INDIA'S PAST MEETS ITS FUTURE</p>
+                  <div class="pl-96 pr-96 max-w-screen flex justify-center space-x-6 mt-8 items-center">
+                      <a href="https://www.youtube.com/@aravaliinternationalschool1671 target="_blank" class="text-red-600 hover:text-red-800 transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M23.498 6.186a2.975 2.975 0 00-2.094-2.104C19.682 3.5 12 3.5 12 3.5s-7.682 0-9.404.582a2.975 2.975 0 00-2.094 2.104A31.173 31.173 0 000 12a31.173 31.173 0 00.502 5.814 2.975 2.975 0 002.094 2.104C4.318 20.5 12 20.5 12 20.5s7.682 0 9.404-.582a2.975 2.975 0 002.094-2.104A31.173 31.173 0 0024 12a31.173 31.173 0 00-.502-5.814zM9.75 15.202V8.798L15.375 12l-5.625 3.202z"/>
+                          </svg>
+                      </a>
+                      <a href="https://in.linkedin.com/company/aravali-international-school-faridabad" target="_blank" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M4.98 3.5c0 1.37-1.11 2.48-2.48 2.48S0 4.87 0 3.5C0 2.13 1.11 1.02 2.48 1.02S4.98 2.13 4.98 3.5zM.42 24H4.6V7.98H.42V24zm7.82 0h4.2V14.82c0-2.04 2.6-2.22 2.6 0V24h4.2V14.22c0-5.78-6.2-5.56-8.4-2.72V7.98H8.24V24z"/>
+                          </svg>
+                      </a>
+                      <a href="https://www.instagram.com/aravalischool85/?hl=en" target="_blank" class="text-pink-500 hover:text-pink-900 transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M7.5 2A5.5 5.5 0 002 7.5v9A5.5 5.5 0 007.5 22h9a5.5 5.5 0 005.5-5.5v-9A5.5 5.5 0 0016.5 2h-9zM12 7.6a4.4 4.4 0 110 8.8 4.4 4.4 0 010-8.8zm7.2-.9a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0zM12 9.6a2.4 2.4 0 100 4.8 2.4 2.4 0 000-4.8z"/>
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </body>
+  </html>
+  
