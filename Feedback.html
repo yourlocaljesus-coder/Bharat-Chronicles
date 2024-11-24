@@ -4,7 +4,43 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Bharat Chronicles | Landing Page</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.latest.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "kp5EB2ns-wnu8fWti",
+      });
+   })();
+</script>
+    <script>
+        
+        function sendEmail(e) {
+            e.preventDefault();  
+
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            };
+
+           
+            emailjs.send("service_u91m769", "template_f7o3lld", formData)
+                .then(function(response) {
+                   
+                    alert("Your Review Has Been Collected!");
+                    document.getElementById("contact-form").reset(); 
+                }, function(error) {
+                
+                    alert("Failed to send message. Please try again.");
+                    console.error("Error:", error);
+                });
+        }
+    </script>
+    <title>Bharat Chronicles | Contact Us</title>
     <style>
         .underline-hover::before {
             content: '';
@@ -14,7 +50,7 @@
             transform: translateX(-50%) scaleX(0);
             width: 100%;
             height: 2px;
-            background-color: red;
+            background-color: Red;
             transition: transform 0.3s ease-in-out;
         }
 
@@ -41,42 +77,6 @@
             background-color: red;
         }
 
-        @keyframes typing {
-            0% { width: 0; }
-            100% { width: 93%; }
-        }
-
-        @keyframes blink {
-            0%, 50% { border-right-color: transparent; }
-            50%, 100% { border-right-color: red; }
-        }
-
-        @keyframes pop-out {
-            0% { transform: scale(0.8); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        h1 {
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid red;
-            width: 0;
-            animation: typing 4s steps(500) 1s forwards, blink 0.7s step-end infinite, pop-out 0.6s ease-in-out 0s;
-            padding-left: 35px;
-            color: #ffffff; 
-            font-size: 2rem; 
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-            height: fit-content;
-            padding-bottom: 10px;
-        }
-
-        pre {
-            padding: 40px;
-        }
-
         nav {
             position: fixed;
             top: 25px;
@@ -93,8 +93,7 @@
         body {
             margin: 0;
         }
-
-        .card {
+         .card {
             position: relative;
             overflow: hidden;
             border-radius: 15px;
@@ -145,35 +144,43 @@
         }
     </style>
 </head>
-<body>
-    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5 max-w-6xl">
+<body class="bg-gradient-to-t from-blue-400 to-blue-700 min-h-screen min-w-screen">
+    <nav class="bg-white flex items-center justify-between text-black max-h-20 py-5  max-w-6xl">
         <img src="images/bharat_chronicles-removebg-preview.png" alt="Logo" class="max-h-20 mr-4 fade-in">
         <ul class="flex space-x-5">
-            <li class="cursor-pointer"><a href="index.html" class="no-underline hover:text-red-500 underline-hover fade-in active">Home</a></li>
+            <li class="cursor-pointer"><a href="index.html" class="no-underline hover:text-red-500 underline-hover fade-in">Home</a></li>
             <li class="cursor-pointer"><a href="history.html" class="no-underline hover:text-red-500 underline-hover fade-in">Brief History</a></li>
             <li class="cursor-pointer"><a href="wonders.html" class="no-underline hover:text-red-500 underline-hover fade-in">Wonders Of India</a></li>
             <li class="cursor-pointer"><a href="Geography.html" class="no-underline hover:text-red-500 underline-hover fade-in">Geography</a></li>
             <li class="cursor-pointer"><a href="patriots.html" class="no-underline hover:text-red-500 underline-hover fade-in">Patriots</a></li>
-            <li class="cursor-pointer"><a href="Feedback.html" class="no-underline hover:text-red-500 underline-hover fade-in">Feedback</a></li>
+            <li class="cursor-pointer"><a href="Feedback.html" class="no-underline hover:text-red-500 underline-hover fade-in active">Feedback</a></li>
         </ul>
     </nav>
-    <div class="main bg-gradient-to-t from-blue-700 to-blue-400 min-h-screen pt-52 flex justify-center items-left">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="text-left text-white md:w-100 w-full">
-                <h1 class="font-serif text-9xl underline">Bharat Chronicles</h1>
-                <pre class="font-mono text-2xl">"Bharat Chronicles – Where India’s Past Meets Its Future" 
-Here at Bharat Chronicles we aim to teach you everything there is to know 
-about our country "India" or you may say "Bharat" this website was made with    
-love and hardwork by the students of Aravali International School, Sector-85!
-We have worked tirelessly to make this Amazing Website For you. Please feel free
-to review our website!</pre>
+
+    <section class="bg-gradient-to-t from-blue-700 to-blue-400 min-h-screen min-w-screen pt-16">
+        <div class="font-[sans-serif] lg:h-screen">
+            <div class="grid lg:grid-cols-3 items-center max-lg:justify-center gap-6 h-full sm:p-12 p-8 max-sm:pt-2">
+                <div class="max-w-lg max-lg:mx-auto max-lg:text-center max-lg:mb-6">
+                    <h2 class="font-extrabold text-white px-6 text-5xl">Please Review out Site!</h2>
+                    <p class="font-semibold text-white mt-4 leading-relaxed px-6 text-xl">Have a specific inquiry or looking to explore new opportunities? Our experienced team is ready to engage with you.</p>
+
+                   
+                    <form id="contact-form" class="mx-auto mt-8 rounded-lg p-6 shadow-sm space-y-4" onsubmit="sendEmail(event)">
+                        <input type="text" id="name" name="name" placeholder="Name" class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" required />
+                        <input type="email" id="email" name="email" placeholder="Email/Optional (Use test@example.us)" class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" required />
+                        <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" required />
+                        <textarea id="message" name="message" placeholder="Feedback" rows="6" class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 outline-none" required></textarea>
+                        <button type="submit" class="text-gray-800 bg-green-200 hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="z-10 relative lg:col-span-2">
+                    <img src="https://i.postimg.cc/jjLvPYWp/HR-Glossary-image-3-removebg-preview.png" class="w-3/4 object-contain block mx-auto" />
+                </div>
             </div>
-            <div class="md:w-1/2 w-full">
-                <img src="images/bharat_chronicles__1_-removebg-preview.png" alt="Bharat Chronicles" class="max-w-full">
-            </div>
-        </div>  
-    </div>
-    <hr class="accent-black">
+        </div>
+        <hr>
+    </section>
     <section class="about-us-section" id="about-us">
         <h2 class="about-us-title">About Us</h2>
         <div class="card">
